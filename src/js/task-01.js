@@ -1,14 +1,15 @@
 
-//const list = document.getElementById('categories');
-// const list = document.querySelector('#categories')
-// console.log(list);
+const list = document.getElementById('categories');
+ //const list = document.querySelector('#categories')
+//console.log(list);
 
-// const caunter = 0;
+const elements = list.children;
+//console.log(elements);
 
-// list.forEach(function (li) {
-//     console.log(`Number of categories: ${caunter += li}`);
-//     //return `Number of categories: ${caunter += li}`;
-// });
+console.log(`Number of categories: ${elements.length}`);
+//console.log(`Category: ${}, Elements: ${}`);
+//console.log(`Category: ${}, Elements: ${}`);
+//console.log(`Category: ${}, Elements: ${}`);
+ 
 
 
-console.log(document);
