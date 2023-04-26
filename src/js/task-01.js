@@ -1,15 +1,30 @@
 
 const list = document.getElementById('categories');
- //const list = document.querySelector('#categories')
-//console.log(list);
 
 const elements = list.children;
-//console.log(elements);
+
+const newElements = [...elements];
 
 console.log(`Number of categories: ${elements.length}`);
-//console.log(`Category: ${}, Elements: ${}`);
-//console.log(`Category: ${}, Elements: ${}`);
-//console.log(`Category: ${}, Elements: ${}`);
- 
+
+const getQuantityOfElem = newElements.forEach(function (element, index, array) {
+    //console.log(element);
+    const firstChildEl = element.firstElementChild;
+    //console.log(firstChildEl);
+    const name = firstChildEl.textContent;
+    //console.log(name);
+     const lastChildEl = element.lastElementChild;
+    //console.log(lastChildEl);
+    const arreyOfChildren = lastChildEl.children;
+    //console.log(arreyOfChildren);
+    //console.log(arreyOfChildren.length);
+    //return arreyOfChildren.length;
+    //console.log(`Category: ${name}, Elements: ${arreyOfChildren.length}`);
+    console.log(`Category: ${name}`);
+    console.log(`Elements: ${arreyOfChildren.length}`);
+});
+
+
+    
 
 
