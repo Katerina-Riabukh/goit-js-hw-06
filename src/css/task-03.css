@@ -1,0 +1,9 @@
+.gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.list-item {
+    list-style: none;
+
+}
