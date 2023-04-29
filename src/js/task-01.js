@@ -1,8 +1,6 @@
 
 const list = document.getElementById('categories');
-
 const elements = list.children;
-
 const newElements = [...elements];
 
 console.log(`Number of categories: ${elements.length}`);
