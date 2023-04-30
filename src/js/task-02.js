@@ -13,9 +13,8 @@ const makeElementOfList = ingredients.map((item, index, arr) => {
   const elementOfList = document.createElement('li');
   elementOfList.classList.add('item')
   elementOfList.textContent = ingredients[index];
-  list.append(elementOfList)
   return elementOfList;
 });
 
-
+list.append(...makeElementOfList);
 

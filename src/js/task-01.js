@@ -16,7 +16,6 @@ const getQuantityOfElem = newElements.forEach(function (element, index, array) {
     const arreyOfChildren = lastChildEl.children;
     //console.log(arreyOfChildren);
     //console.log(arreyOfChildren.length);
-    //return arreyOfChildren.length;
     //console.log(`Category: ${name}, Elements: ${arreyOfChildren.length}`);
     console.log(`Category: ${name}`);
     console.log(`Elements: ${arreyOfChildren.length}`);
