@@ -14,5 +14,5 @@ chengeColorBtn.addEventListener('click', getRandomBgdColor);
 
 function getRandomBgdColor(){
   body.style.backgroundColor = getRandomHexColor();
-  color.textContent = body.style.backgroundColor;
+  color.textContent = getRandomHexColor();
 }
