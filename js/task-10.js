@@ -31,29 +31,122 @@ function createBoxBtn(event) {
   createBoxes(value);
 };
 
-const newBox = []
+// let newBox = []
+
+// function createBoxes(amount) {
+  
+//   for (let item = 1; item <= amount; item++){
+    
+//     const box =  document.createElement('div');
+//     box.style.backgroundColor = getRandomHexColor();
+//     box.classList = 'create-elem'
+//     //box.style.width = '30px'
+//     //box.style.height = '30px'
+//     console.log(box.classList.value);
+//     console.log(box);
+  
+//     newBox.push(box)
+    
+//   }
+//   totalBox.append(...newBox)
+  
+//   //console.log(newBox);
+// };
+
+// createBoxes(value);
+
+// function destroyBoxBtn(event) {
+
+//   console.log(event.currentTarget);
+//   box.remove()
+//   //totalBox.remove(...newBox)
+ 
+// }
+
+//--------------------------------
+
+let newBox = [];
+let newBox1 = [];
+let box;
+// const box = document.createElement('div');
+// box.style.backgroundColor = getRandomHexColor();
+// box.classList = 'create-elem'
+// console.log(box);  
+//  totalBox.append(box) 
+
 
 function createBoxes(amount) {
   
   for (let item = 1; item <= amount; item++){
-    
-    const box =  document.createElement('div');
+     
+    box =  document.createElement('div');
     box.style.backgroundColor = getRandomHexColor();
     box.classList = 'create-elem'
+    
     //box.style.width = '30px'
     //box.style.height = '30px'
-    //console.log(box);
-  
+    console.log(box.classList.value);
     newBox.push(box)
-    
+
   }
-  totalBox.append(...newBox)
+ 
+  
+  totalBox.append(...newBox);
+  changeSizesOfBoxes(totalBox)
+ 
+
+  // console.log(box.offsetHeight); 
+  // console.log(box.clientWidth);
   
   //console.log(newBox);
 };
 
-createBoxes(value);
+
+function changeSizesOfBoxes(totalBox) {
+  const arrayOfBoxes = totalBox.children;
+  const changedBoxes = [];
+  
+  let width = box.clientWidth;
+  //console.log(width);
+  let height = box.offsetHeight;
+  //console.log(height);
+  console.log(arrayOfBoxes);
+   
+  
+  for ( box of arrayOfBoxes) {
+    console.log(box);
+   
+    width += 10;
+    console.log(width);
+    //let height = box.offsetHeight;
+    height +=10
+    console.log(height);
+    changedBoxes.push(box)
+  }
+  console.log(changedBoxes);
+  console.log(arrayOfBoxes);
+  totalBox.append(...arrayOfBoxes)
+}
+
+
+
+
+//---------------------
+
+// const box = document.createElement('div');
+// box.style.backgroundColor = getRandomHexColor();
+// box.classList = 'create-elem'
+// console.log(box);   
+// totalBox.append(box) 
+// console.log(box.offsetHeight); 
+// console.log(box.clientWidth);
+
+//createBoxes(value);
 
 function destroyBoxBtn(event) {
-  //box.remove()
+
+  console.log(event.currentTarget);
+  
+  //totalBox.remove(...newBox)
+ 
 }
