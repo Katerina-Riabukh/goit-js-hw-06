@@ -73,6 +73,8 @@ let box;
 // box.classList = 'create-elem'
 // console.log(box);  
 //  totalBox.append(box) 
+let newWidth;
+let newHeight;
 
 
 function createBoxes(amount) {
@@ -82,8 +84,7 @@ function createBoxes(amount) {
     box =  document.createElement('div');
     box.style.backgroundColor = getRandomHexColor();
     box.classList = 'create-elem'
-    
-    //box.style.width = '30px'
+   //box.style.width = '30px'
     //box.style.height = '30px'
     console.log(box.classList.value);
     newBox.push(box)
@@ -101,31 +102,33 @@ function createBoxes(amount) {
   //console.log(newBox);
 };
 
-
 function changeSizesOfBoxes(totalBox) {
   const arrayOfBoxes = totalBox.children;
-  const changedBoxes = [];
+ 
+  
+  let changedBoxes = [];
   
   let width = box.clientWidth;
-  //console.log(width);
+  console.log(width);
   let height = box.offsetHeight;
-  //console.log(height);
+  console.log(height);
   console.log(arrayOfBoxes);
    
+ 
+ 
+  
   
   for ( box of arrayOfBoxes) {
     console.log(box);
    
-    width += 10;
-    console.log(width);
-    //let height = box.offsetHeight;
-    height +=10
-    console.log(height);
-    changedBoxes.push(box)
+    
+   newWidth = width += 10;
+    console.log(newWidth);
+    newHeight = height +=10
+    console.log(newHeight);
+    
   }
   console.log(changedBoxes);
-  console.log(arrayOfBoxes);
-  totalBox.append(...arrayOfBoxes)
 }
 
 
